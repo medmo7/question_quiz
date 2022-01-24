@@ -8,3 +8,13 @@ export const COLORS = {
     success: '#74E7E7',
     failure: '#F19590'
 }
+export const SHADOW_STYLE = {
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 5,
+    },
+    shadowOpacity: 0.16,
+    shadowRadius: 3.84,
+    elevation: 10,
+}

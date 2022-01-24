@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { ANSWER_STATUS, QuestionWord } from '../util/types';
-import { COLORS } from '../util/constants';
+import { COLORS, SHADOW_STYLE } from '../util/constants';
 
 type Props = {
     data: QuestionWord,
@@ -48,10 +48,11 @@ export default function Choice(props: Props) {
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 12,
+        paddingHorizontal: 20,
         paddingVertical: 10,
         borderRadius: 15,
-        margin:5
+        margin:5,
+        ...SHADOW_STYLE
     },
     word: {
         fontSize: 20,

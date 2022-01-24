@@ -54,7 +54,7 @@ export default function HomeView() {
 
     const [currentQuestion, setCurrentQuestion] = React.useState(mockQuestion[0]);
     const [currentAnswerChoice, setCurrentAnswerChoice] = React.useState(null);
-    const [answerStatus, setAnswerStatus] = React.useState<ANSWER_STATUS>(ANSWER_STATUS.idle);
+    const [answerStatus, setAnswerStatus] = React.useState<ANSWER_STATUS>(ANSWER_STATUS.empty);
     const [answerChoices, setAnswerChoices] = React.useState<Choice>(mockQuestion[0].choices);
 
     return (
@@ -63,7 +63,7 @@ export default function HomeView() {
 
             <Question question={currentQuestion} answerChoice={currentAnswerChoice} answerStatus={answerStatus} />
 
-            <AnswerChoices data={answerChoices} />
+            <AnswerChoices data={answerChoices} currentChoice={currentAnswerChoice}/>
 
             <QuestionControl />
 
